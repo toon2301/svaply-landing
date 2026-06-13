@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Svaply – ponúkni svoje zručnosti, nájdi správneho človeka vo svojom okolí. Čoskoro spúšťame.">
+  <title>Svaply – Čoskoro</title>
+  <link rel="icon" href="svaply-icon.png" type="image/png">
+  <!-- Zoho Campaigns Web-Optin Form's Header Code Starts Here -->
+  <link rel="preconnect" href="https://zcv2-zcmp.maillist-manage.eu" crossorigin>
+  <script type="text/javascript" id="zoho-optin-js" src="https://zcv2-zcmp.maillist-manage.eu/js/optin.min.js" onload="if(typeof setupSF==='function'){setupSF('sf3z1e626b537c29e7ef0c55a228554c31ece05641c9bbdbd15c8ffcda6e3c504df4','ZCFORMVIEW',false,'light',false,'0');}"></script>
+  <script type="text/javascript">
+    function runOnFormSubmit_sf3z1e626b537c29e7ef0c55a228554c31ece05641c9bbdbd15c8ffcda6e3c504df4(th) {
+      if (typeof window.svaplyOnZohoFormSubmit === 'function') {
+        window.svaplyOnZohoFormSubmit(th);
+      }
+    }
+  </script>
+  <!-- Zoho Campaigns Web-Optin Form's Header Code Ends Here -->
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #7C3AED;
+      --primary-dark: #5B21B6;
+      --primary-light: #8B5CF6;
+      --bg: #F9FAFB;
+      --text: #111827;
+      --text-muted: #6B7280;
+      --border: #E5E7EB;
+      --white: #FFFFFF;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Mobile-first: show mobile blocks, hide desktop blocks */
+    .mobile-only { display: block; }
+    .desktop-only { display: none; }
+
+    /* ── Mobile + tablet layout (max-width: 1023px) ── */
+    .site {
+      min-height: 100dvh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: clamp(22rem, 90vw, 36rem);
+      min-height: 100dvh;
+      padding:
+        max(0.75rem, env(safe-area-inset-top))
+        clamp(1.25rem, 4vw, 2.5rem)
+        max(1.5rem, env(safe-area-inset-bottom));
+      margin: 0 auto;
+    }
+
+    .page-header {
+      display: grid;
+      grid-template-columns: 2.75rem 1fr 2.75rem;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .page-header .logo {
+      justify-self: center;
+      line-height: 0;
+      text-decoration: none;
+    }
+
+    .page-header .logo-img {
+      display: block;
+      height: 3.5rem;
+      width: auto;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .social-link:hover {
+      color: var(--primary);
+      border-color: var(--primary-light);
+      background: rgba(124, 58, 237, 0.05);
+    }
+
+    .social-link svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      fill: currentColor;
+    }
+
+    .social-link--left { justify-self: start; }
+    .social-link--right { justify-self: end; }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 0.25rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 0.35rem;
+    }
+
+    .lang-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+      font-family: inherit;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.03em;
+      padding: 0.5rem 0.2rem;
+      border: none;
+      border-radius: 9999px;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-btn:hover { color: var(--text); }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .logo-aside {
+      display: none;
+      text-decoration: none;
+      line-height: 0;
+    }
+
+    .logo-aside .logo-img {
+      display: block;
+      width: auto;
+      height: 10rem;
+    }
+
+    .hero {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: clamp(0.625rem, 2vw, 1rem);
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-size: clamp(0.9375rem, 2.2vw, 1.125rem);
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    .teaser {
+      list-style: none;
+      width: 100%;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .teaser li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: clamp(0.875rem, 2vw, 1.0625rem);
+      color: var(--text);
+      line-height: 1.55;
+      text-align: left;
+    }
+
+    .teaser li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-top: 0.45rem;
+      border-radius: 50%;
+      background: var(--primary-light);
+    }
+
+    .form-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-section > div { width: 100%; }
+
+    .form-note {
+      text-align: center;
+      width: 100%;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Zoho form overrides */
+    #sf3z1e626b537c29e7ef0c55a228554c31ece05641c9bbdbd15c8ffcda6e3c504df4 {
+      opacity: 1 !important;
+      width: 100%;
+    }
+
+    #customForm .quick_form_22_css[name="SIGNUP_BODY"] {
+      background: transparent !important;
+      background-image: none !important;
+      border: none !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: unset !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+    }
+
+    #SIGNUP_HEADING { display: none !important; }
+
+    #zcampaignOptinForm {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.75rem !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
+
+    #zcampaignOptinForm > div[style*="inline-block"] {
+      display: block !important;
+      width: 100% !important;
+    }
+
+    .zoho-field-email,
+    .zoho-field-submit {
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 !important;
+      display: block !important;
+    }
+
+    #EMBED_FORM_EMAIL_LABEL {
+      width: 100% !important;
+      height: 3rem !important;
+      padding: 0 1rem !important;
+      font-size: 1rem !important;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+      color: var(--text) !important;
+      background: var(--white) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: 0.625rem !important;
+      outline: none !important;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    #EMBED_FORM_EMAIL_LABEL:focus {
+      border-color: var(--primary-light) !important;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15) !important;
+    }
+
+    #EMBED_FORM_EMAIL_LABEL.zcerrortxt {
+      border-color: #EF4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+    }
+
+    #EMBED_FORM_EMAIL_LABEL::placeholder {
+      color: #9CA3AF !important;
+    }
+
+    #zcWebOptin {
+      width: 100% !important;
+      height: 3rem !important;
+      font-size: 1rem !important;
+      font-weight: 600 !important;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+      color: var(--white) !important;
+      background-color: var(--primary) !important;
+      border: none !important;
+      border-radius: 0.625rem !important;
+      cursor: pointer !important;
+      transition: background-color 0.2s, transform 0.15s;
+    }
+
+    #zcWebOptin:hover {
+      background-color: var(--primary-dark) !important;
+    }
+
+    #zcWebOptin:active { transform: scale(0.98); }
+
+    #zcWebOptin:disabled {
+      opacity: 0.65;
+      cursor: not-allowed !important;
+    }
+
+    #errorMsgDiv {
+      border-radius: 0.5rem !important;
+      font-size: 0.875rem !important;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+
+    #Zc_SignupSuccess {
+      display: none !important;
+    }
+
+    #signupSuccessMsg {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+      font-size: 0.9375rem !important;
+    }
+
+    #zcOptinOverLay,
+    #zcOptinSuccessPopup {
+      display: none !important;
+    }
+
+    #svaply-form-success {
+      display: none;
+      text-align: center;
+      padding: 0.75rem 0;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text);
+      white-space: pre-line;
+    }
+
+    #svaply-form-success.is-visible {
+      display: block;
+    }
+
+    .social {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: auto;
+      padding-top: 1rem;
+    }
+
+    .social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .social a:hover {
+      color: var(--primary);
+      border-color: var(--primary-light);
+      background: rgba(124, 58, 237, 0.05);
+    }
+
+    .social svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      fill: currentColor;
+    }
+
+    /* Desktop varianty musia byť po .lang-switch / .social, inak flex prepíše display:none */
+    .lang-switch.desktop-only,
+    .social.desktop-only {
+      display: none;
+    }
+
+    @media (min-width: 380px) and (max-width: 1023px) {
+      .lang-btn {
+        font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+        min-height: 2.125rem;
+        padding: 0.55rem 0.25rem;
+      }
+
+      .page-header .logo-img {
+        height: clamp(3.5rem, 7vw, 5rem);
+      }
+    }
+
+    /* Tablet – mobilný layout, ale širší a čitateľnejší */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .hero {
+        margin-bottom: 1.25rem;
+      }
+
+      .teaser {
+        margin-bottom: 1.5rem;
+        gap: 1rem;
+      }
+
+      .form-note {
+        font-size: 0.875rem;
+      }
+
+      .social-link {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    /* ── Desktop layout (min-width: 1024px) ── */
+    @media (min-width: 1024px) {
+      .mobile-only { display: none !important; }
+
+      .lang-switch.desktop-only {
+        display: flex;
+      }
+
+      .social.desktop-only {
+        display: flex;
+      }
+
+      .site {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) min(34rem, 90%) minmax(0, 1fr);
+        column-gap: clamp(1rem, 3vw, 2rem);
+        align-items: start;
+        min-height: 100dvh;
+        padding: 2.5rem clamp(1rem, 2vw, 1.5rem) 3rem;
+      }
+
+      .page {
+        grid-column: 2;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 0;
+        margin: 0;
+      }
+
+      .logo-aside {
+        display: block;
+        position: sticky;
+        top: calc(50vh - clamp(4rem, 8vw, 7rem));
+        align-self: start;
+        max-width: 100%;
+        pointer-events: none;
+      }
+
+      .logo-aside--left {
+        grid-column: 1;
+        justify-self: center;
+      }
+
+      .logo-aside--right {
+        grid-column: 3;
+        justify-self: center;
+        pointer-events: auto;
+      }
+
+      .logo-aside .logo-img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-height: clamp(6.5rem, 14vw, 10.5rem);
+        max-width: 100%;
+      }
+
+      .lang-switch {
+        position: relative;
+        z-index: 10;
+        align-self: center;
+        justify-content: center;
+        max-width: 28rem;
+        margin-bottom: 2rem;
+        padding: 0.4rem;
+        gap: 0.35rem;
+      }
+
+      .lang-btn {
+        font-size: 0.875rem;
+        min-height: auto;
+        padding: 0.55rem 0.5rem;
+      }
+
+      .hero {
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: clamp(0.9375rem, 2vw, 1.125rem);
+      }
+
+      .teaser {
+        margin-bottom: 2rem;
+        gap: 0.875rem;
+      }
+
+      .teaser li {
+        font-size: 0.9375rem;
+        text-align: left;
+      }
+
+      .teaser li::before {
+        margin-top: 0.5rem;
+      }
+
+      .form-section {
+        margin-bottom: 1rem;
+      }
+
+      .form-note {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    /* Širší desktop – plná šírka obsahu a väčšie logá */
+    @media (min-width: 1200px) {
+      .site {
+        grid-template-columns: minmax(0, 1fr) min(42rem, 100%) minmax(0, 1fr);
+        column-gap: clamp(1rem, 3vw, 2.5rem);
+        padding: 3.5rem 2rem 4rem;
+      }
+
+      .logo-aside {
+        top: calc(50vh - 7rem);
+      }
+
+      .logo-aside .logo-img {
+        max-height: 14rem;
+      }
+
+      .lang-switch {
+        max-width: 32rem;
+        margin-bottom: 3rem;
+      }
+
+      .hero {
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        margin-bottom: 1.25rem;
+      }
+
+      .subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.125rem);
+      }
+
+      .teaser {
+        margin-bottom: 3rem;
+        gap: 1.125rem;
+      }
+
+      .teaser li {
+        font-size: 1rem;
+      }
+
+      .form-note {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <div class="logo-aside logo-aside--left desktop-only" aria-hidden="true">
+      <img src="svaply-icon.png" alt="" class="logo-img" width="304" height="304">
+    </div>
+
+    <main class="page">
+      <header class="page-header mobile-only">
+        <a href="https://www.instagram.com/svaplyofficial/" class="social-link social-link--left" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="/" class="logo" aria-label="Svaply">
+          <img src="svaply-logo.png" alt="Svaply" class="logo-img" width="240" height="125">
+        </a>
+        <a href="https://www.facebook.com/SvaplyOfficial" class="social-link social-link--right" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+      </header>
+
+      <nav class="lang-switch desktop-only" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="sk" aria-pressed="false">SK</button>
+        <button type="button" class="lang-btn" data-lang="cs" aria-pressed="false">CS</button>
+        <button type="button" class="lang-btn" data-lang="hu" aria-pressed="false">HU</button>
+        <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false">PL</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+
+      <section class="hero">
+        <h1 data-i18n="heading">Svapni si čo len chceš</h1>
+        <p class="subtitle" data-i18n="subtitle">Ponúkni, čo vieš. Nájdi niekoho, kto ti pomôže. Od opravárov a majstrov až po umelcov, trénerov či bežnú výpomoc. Všetko na jednom mieste vo svojom okolí.</p>
+      </section>
+
+      <ul class="teaser">
+        <li data-i18n="teaser1">Ponúkni svoje zručnosti a služby – od remesla až po umenie, šport či každodennú výpomoc</li>
+        <li data-i18n="teaser2">Nájdi správneho človeka vo svojom okolí</li>
+        <li data-i18n="teaser3">Začni zadarmo – bez zložitostí a zbytočných prekážok</li>
+      </ul>
+
+      <section class="form-section" aria-labelledby="signup-label">
+        <span id="signup-label" class="visually-hidden" data-i18n="formLabel">Prihlásenie na odber noviniek</span>
+
+        <!-- Zoho Campaigns Web-Optin Form Starts Here -->
+        <div id="sf3z1e626b537c29e7ef0c55a228554c31ece05641c9bbdbd15c8ffcda6e3c504df4" data-type="signupform">
+          <div id="customForm">
+            <div class="quick_form_22_css" name="SIGNUP_BODY">
+              <div>
+                <div id="SIGNUP_HEADING">Chcem byť medzi prvými</div>
+                <div style="position:relative;">
+                  <div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154); margin-top: 10px;margin-bottom:10px;word-break:break-all">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="10%">
+                            <img class="successicon" src="https://zcv2-zcmp.maillist-manage.eu/images/challangeiconenable.jpg" align="absmiddle" alt="">
+                          </td>
+                          <td>
+                            <span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <form method="POST" id="zcampaignOptinForm" action="https://zcv2-zcmp.maillist-manage.eu/weboptin.zc" target="_zcSignup">
+                  <div id="errorMsgDiv" style="background-color: rgb(255, 235, 232); padding: 10px; color: rgb(210, 0, 0); font-size: 11px; margin: 20px 10px 0px; border: 1px solid rgb(255, 217, 211); opacity: 1; display: none">Please correct the marked field(s) below.</div>
+                  <div class="zoho-field-email" style="position: relative; width: 270px; height: 50px; margin-top: 25px; display: inline-block">
+                    <input type="text" placeholder="Email" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+                  </div>
+                  <div style="position: relative; width: 270px; height: 50px; display: none">
+                    <input type="text" placeholder="" changeitem="SIGNUP_FORM_FIELD" name="LASTNAME" id="LASTNAME">
+                  </div>
+                  <div class="zoho-field-submit" style="position: relative; width: 270px; height: 40px; margin: 20px 0 20px; display: inline-block">
+                    <input type="button" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Chcem byť medzi prvými →">
+                  </div>
+                  <div id="svaply-form-success" role="status" aria-live="polite"></div>
+                  <input type="hidden" id="fieldBorder" value="">
+                  <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+                  <input type="hidden" id="emailReportId" name="emailReportId" value="">
+                  <input type="hidden" id="formType" name="formType" value="QuickForm">
+                  <input type="hidden" name="zx" id="cmpZuid" value="14aeb92986">
+                  <input type="hidden" name="zcvers" value="2.0">
+                  <input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+                  <input type="hidden" id="mode" name="mode" value="OptinCreateView">
+                  <input type="hidden" id="zcld" name="zcld" value="13fe26b87c545615">
+                  <input type="hidden" id="zctd" name="zctd" value="13fe26b87c545539">
+                  <input type="hidden" id="document_domain" value="">
+                  <input type="hidden" id="zc_Url" value="zcv2-zcmp.maillist-manage.eu">
+                  <input type="hidden" id="new_optin_response_in" value="2">
+                  <input type="hidden" id="duplicate_optin_response_in" value="2">
+                  <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+                  <input type="hidden" id="zc_formIx" name="zc_formIx" value="3z1e626b537c29e7ef0c55a228554c31ece05641c9bbdbd15c8ffcda6e3c504df4">
+                  <input type="hidden" id="viewFrom" value="URL_ACTION">
+                  <span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
+                  <span style="display: none" id="dt_FIRSTNAME">1,false,1,First Name,2</span>
+                  <span style="display: none" id="dt_LASTNAME">1,false,1,Last Name,2</span>
+                </form>
+              </div>
+            </div>
+          </div>
+          <img src="https://zcv2-zcmp.maillist-manage.eu/images/spacer.gif" id="refImage" onload="referenceSetter(this)" style="display:none;" alt="">
+        </div>
+        <!-- Zoho Campaigns Web-Optin Form Ends Here -->
+      </section>
+
+      <p class="form-note" data-i18n="formNote">Dáme ti vedieť hneď po spustení. Žiadny spam.</p>
+
+      <nav class="lang-switch mobile-only" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="sk" aria-pressed="false">SK</button>
+        <button type="button" class="lang-btn" data-lang="cs" aria-pressed="false">CS</button>
+        <button type="button" class="lang-btn" data-lang="hu" aria-pressed="false">HU</button>
+        <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false">PL</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+
+      <div class="social desktop-only">
+        <a href="https://www.instagram.com/svaplyofficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/SvaplyOfficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+      </div>
+    </main>
+
+    <a href="/" class="logo-aside logo-aside--right desktop-only" aria-label="Svaply">
+      <img src="svaply-logo.png" alt="Svaply" class="logo-img" width="304" height="159">
+    </a>
+  </div>
+
+  <input type="hidden" id="signupFormType" value="QuickForm_Vertical">
+  <iframe name="_zcSignup" id="_zcSignup" title="Zoho signup" tabindex="-1" aria-hidden="true" style="display:none;width:0;height:0;border:0;"></iframe>
+  <div id="zcOptinOverLay" oncontextmenu="return false"></div>
+  <div id="zcOptinSuccessPopup">
+    <span id="closeSuccess">
+      <img src="https://zcv2-zcmp.maillist-manage.eu/images/videoclose.png" alt="">
+    </span>
+    <div id="zcOptinSuccessPanel"></div>
+  </div>
+
+  <script>
+    (function () {
+      var translations = {
+        sk: {
+          heading: 'Svapni si čo len chceš',
+          subtitle: 'Ponúkni, čo vieš. Nájdi niekoho, kto ti pomôže. Od opravárov a majstrov až po umelcov, trénerov či bežnú výpomoc. Všetko na jednom mieste vo svojom okolí.',
+          teaser1: 'Ponúkni svoje zručnosti a služby – od remesla až po umenie, šport či každodennú výpomoc',
+          teaser2: 'Nájdi správneho človeka vo svojom okolí',
+          teaser3: 'Začni zadarmo – bez zložitostí a zbytočných prekážok',
+          formNote: 'Dáme ti vedieť hneď po spustení. Žiadny spam.',
+          formLabel: 'Prihlásenie na odber noviniek',
+          emailPlaceholder: 'Email',
+          submitBtn: 'Chcem byť medzi prvými →',
+          successMsg: 'Ďakujeme za prihlásenie!',
+          formSubmitSuccess: 'Tešíme sa na teba! Dáme ti vedieť\nhneď ako Svaply spustíme.',
+          errorMsg: 'Prosím, oprav označené polia nižšie.',
+          pageTitle: 'Svaply – Čoskoro',
+          metaDescription: 'Svaply – ponúkni svoje zručnosti, nájdi správneho človeka vo svojom okolí. Čoskoro spúšťame.'
+        },
+        cs: {
+          heading: 'Svapni si, co jen chceš',
+          subtitle: 'Nabídni, co umíš. Najdi někoho, kdo ti pomůže. Od řemeslníků a opravářů až po umělce, trenéry nebo běžnou pomoc. Vše na jednom místě ve tvém okolí.',
+          teaser1: 'Nabídni své dovednosti a služby – od řemesel přes umění a sport až po každodenní pomoc',
+          teaser2: 'Najdi správného člověka ve svém okolí',
+          teaser3: 'Začni zdarma – bez zbytečných komplikací a překážek',
+          formNote: 'Dáme ti vědět hned po spuštění. Žádný spam.',
+          formLabel: 'Přihlášení k odběru novinek',
+          emailPlaceholder: 'E-mail',
+          submitBtn: 'Chci být mezi prvními →',
+          successMsg: 'Děkujeme za přihlášení!',
+          formSubmitSuccess: 'Těšíme se na tebe! Dáme ti vědět,\njakmile Svaply spustíme.',
+          errorMsg: 'Oprav prosím označená pole níže.',
+          pageTitle: 'Svaply – Brzy spouštíme',
+          metaDescription: 'Svaply – nabídni své dovednosti, najdi správného člověka ve svém okolí. Brzy spouštíme.'
+        },
+        hu: {
+          heading: 'Svapni, amit csak szeretnél',
+          subtitle: 'Ajánld fel, amit tudsz. Találj valakit, aki segít. Szerelőktől és mesterektől művészekig, edzőkig vagy mindennapi segítségig. Minden egy helyen a környékeden.',
+          teaser1: 'Ajánld fel tudásodat és szolgáltatásaidat – a kézművestől a művészeten és sporton át a mindennapi segítségig',
+          teaser2: 'Találd meg a megfelelő embert a környékeden',
+          teaser3: 'Kezdj ingyen – felesleges bonyodalmak és akadályok nélkül',
+          formNote: 'Értesítünk, amint elindulunk. Nincs spam.',
+          formLabel: 'Hírlevél-feliratkozás',
+          emailPlaceholder: 'E-mail',
+          submitBtn: 'Az elsők között szeretnék lenni →',
+          successMsg: 'Köszönjük a feliratkozást!',
+          formSubmitSuccess: 'Várunk rád! Szólunk,\namint elindítjuk a Svaply-t.',
+          errorMsg: 'Kérjük, javítsd az alábbi megjelölt mezőket.',
+          pageTitle: 'Svaply – Hamarosan',
+          metaDescription: 'Svaply – ajánld fel tudásodat, találd meg a megfelelő embert a környékeden. Hamarosan indulunk.'
+        },
+        pl: {
+          heading: 'Svapni to, czego chcesz',
+          subtitle: 'Zaoferuj to, co umiesz. Znajdź kogoś, kto Ci pomoże. Od fachowców i majsterkowiczów po artystów, trenerów czy codzienną pomoc. Wszystko w jednym miejscu w Twojej okolicy.',
+          teaser1: 'Zaoferuj swoje umiejętności i usługi – od rzemiosła po sztukę, sport czy codzienną pomoc',
+          teaser2: 'Znajdź właściwą osobę w swojej okolicy',
+          teaser3: 'Zacznij za darmo – bez zbędnych komplikacji i przeszkód',
+          formNote: 'Damy Ci znać zaraz po starcie. Zero spamu.',
+          formLabel: 'Zapis na newsletter',
+          emailPlaceholder: 'E-mail',
+          submitBtn: 'Chcę być wśród pierwszych →',
+          successMsg: 'Dziękujemy za zapisanie się!',
+          formSubmitSuccess: 'Cieszymy się na Ciebie! Damy znać,\ngdy tylko uruchomimy Svaply.',
+          errorMsg: 'Popraw zaznaczone pola poniżej.',
+          pageTitle: 'Svaply – Wkrótce',
+          metaDescription: 'Svaply – zaoferuj swoje umiejętności, znajdź właściwą osobę w okolicy. Wkrótce startujemy.'
+        },
+        de: {
+          heading: 'Svapni, was du willst',
+          subtitle: 'Biete an, was du kannst. Finde jemanden, der dir hilft. Von Handwerkern und Meistern über Künstler und Trainer bis hin zur Alltagshilfe. Alles an einem Ort in deiner Nähe.',
+          teaser1: 'Biete deine Fähigkeiten und Dienste an – vom Handwerk über Kunst und Sport bis zur Alltagshilfe',
+          teaser2: 'Finde die richtige Person in deiner Nähe',
+          teaser3: 'Starte kostenlos – ohne Umwege und unnötige Hürden',
+          formNote: 'Wir melden uns direkt nach dem Start. Kein Spam.',
+          formLabel: 'Newsletter-Anmeldung',
+          emailPlaceholder: 'E-Mail',
+          submitBtn: 'Ich möchte zu den Ersten gehören →',
+          successMsg: 'Danke für deine Anmeldung!',
+          formSubmitSuccess: 'Wir freuen uns auf dich! Wir melden uns,\ sobald wir Svaply starten.',
+          errorMsg: 'Bitte korrigiere die markierten Felder unten.',
+          pageTitle: 'Svaply – Bald verfügbar',
+          metaDescription: 'Svaply – biete deine Fähigkeiten an, finde die richtige Person in deiner Nähe. Start in Kürze.'
+        },
+        en: {
+          heading: 'Svapni whatever you want',
+          subtitle: 'Offer what you know. Find someone who can help. From repairmen and craftsmen to artists, trainers, or everyday help. Everything in one place near you.',
+          teaser1: 'Offer your skills and services – from crafts to art, sports, or everyday help',
+          teaser2: 'Find the right person in your area',
+          teaser3: 'Start for free – no hassle, no unnecessary barriers',
+          formNote: 'We will let you know as soon as we launch. No spam.',
+          formLabel: 'Newsletter signup',
+          emailPlaceholder: 'Email',
+          submitBtn: 'I want to be among the first →',
+          successMsg: 'Thank you for signing up!',
+          formSubmitSuccess: "We're excited to have you! We'll let you know\nas soon as we launch Svaply.",
+          errorMsg: 'Please correct the marked field(s) below.',
+          pageTitle: 'Svaply – Coming Soon',
+          metaDescription: 'Svaply – offer your skills, find the right person near you. Launching soon.'
+        }
+      };
+
+      var LANG_KEY = 'svaply-lang';
+      var SUPPORTED_LANGS = ['sk', 'cs', 'hu', 'pl', 'de', 'en'];
+      var BROWSER_LANG_MAP = { sk: 'sk', cs: 'cs', hu: 'hu', pl: 'pl', de: 'de' };
+      var currentLang = 'sk';
+      function detectBrowserLang() {
+        var prefs = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || 'en'];
+
+        for (var i = 0; i < prefs.length; i++) {
+          var code = String(prefs[i]).toLowerCase().split('-')[0];
+          if (BROWSER_LANG_MAP[code]) return BROWSER_LANG_MAP[code];
+        }
+        return 'en';
+      }
+
+      function getInitialLang() {
+        try {
+          var stored = localStorage.getItem(LANG_KEY);
+          if (stored && SUPPORTED_LANGS.indexOf(stored) !== -1) return stored;
+        } catch (e) {}
+        return detectBrowserLang();
+      }
+
+      function applyFormTranslations(t) {
+        var emailInput = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+        if (emailInput) emailInput.setAttribute('placeholder', t.emailPlaceholder);
+
+        var submitBtn = document.getElementById('zcWebOptin');
+        if (submitBtn) submitBtn.value = t.submitBtn;
+
+        var successMsg = document.getElementById('signupSuccessMsg');
+        if (successMsg) successMsg.textContent = '\u00a0\u00a0' + t.successMsg;
+
+        var errorMsg = document.getElementById('errorMsgDiv');
+        if (errorMsg) errorMsg.textContent = t.errorMsg;
+
+        var submitSuccess = document.getElementById('svaply-form-success');
+        if (submitSuccess && t.formSubmitSuccess) submitSuccess.textContent = t.formSubmitSuccess;
+      }
+
+      function showFormSubmitSuccess() {
+        var emailField = document.querySelector('.zoho-field-email');
+        var submitField = document.querySelector('.zoho-field-submit');
+        var successEl = document.getElementById('svaply-form-success');
+        var zohoSuccess = document.getElementById('Zc_SignupSuccess');
+        var overlay = document.getElementById('zcOptinOverLay');
+        var popup = document.getElementById('zcOptinSuccessPopup');
+        var errorMsg = document.getElementById('errorMsgDiv');
+
+        if (emailField) emailField.style.display = 'none';
+        if (submitField) submitField.style.display = 'none';
+        if (zohoSuccess) zohoSuccess.style.display = 'none';
+        if (overlay) overlay.style.display = 'none';
+        if (popup) popup.style.display = 'none';
+        if (errorMsg) errorMsg.style.display = 'none';
+        if (successEl) {
+          var t = translations[currentLang];
+          if (t && t.formSubmitSuccess) successEl.textContent = t.formSubmitSuccess;
+          successEl.classList.add('is-visible');
+        }
+      }
+
+      window.svaplyOnZohoFormSubmit = function () {
+        if (!window.__svaplyAwaitingZohoResponse) {
+          window.__svaplyAwaitingZohoResponse = true;
+          setTimeout(function () {
+            window.__svaplyAwaitingZohoResponse = false;
+          }, 15000);
+          return;
+        }
+        window.__svaplyAwaitingZohoResponse = false;
+
+        var errorMsg = document.getElementById('errorMsgDiv');
+        if (errorMsg && errorMsg.style.display !== 'none' && errorMsg.offsetParent !== null) {
+          return;
+        }
+
+        showFormSubmitSuccess();
+      };
+
+      function setLang(lang) {
+        if (SUPPORTED_LANGS.indexOf(lang) === -1) return;
+        var t = translations[lang];
+        if (!t) return;
+
+        currentLang = lang;
+        document.documentElement.lang = lang;
+
+        var els = document.querySelectorAll('[data-i18n]');
+        for (var i = 0; i < els.length; i++) {
+          var key = els[i].getAttribute('data-i18n');
+          if (t[key]) els[i].textContent = t[key];
+        }
+
+        applyFormTranslations(t);
+
+        document.title = t.pageTitle;
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', t.metaDescription);
+
+        var buttons = document.querySelectorAll('.lang-btn');
+        for (var j = 0; j < buttons.length; j++) {
+          var btn = buttons[j];
+          var isActive = btn.getAttribute('data-lang') === lang;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        }
+
+        try {
+          localStorage.setItem(LANG_KEY, lang);
+        } catch (e) {}
+      }
+
+      function initLangSwitcher() {
+        document.addEventListener('click', function (e) {
+          var btn = e.target.closest('.lang-btn');
+          if (!btn) return;
+          e.preventDefault();
+          setLang(btn.getAttribute('data-lang'));
+        });
+      }
+
+      var ZOHO_FORM_ID = 'sf3z1e626b537c29e7ef0c55a228554c31ece05641c9bbdbd15c8ffcda6e3c504df4';
+
+      function initZohoForm() {
+        if (typeof setupSF === 'function' && !window.__svaplyZohoInit) {
+          setupSF(ZOHO_FORM_ID, 'ZCFORMVIEW', false, 'light', false, '0');
+          window.__svaplyZohoInit = true;
+        }
+
+        var refImage = document.getElementById('refImage');
+        if (refImage && refImage.complete && typeof referenceSetter === 'function') {
+          referenceSetter(refImage);
+        }
+
+        setLang(currentLang);
+        setTimeout(function () { setLang(currentLang); }, 300);
+        setTimeout(function () { setLang(currentLang); }, 1200);
+      }
+
+      function waitForZoho(callback, attempt) {
+        attempt = attempt || 0;
+        if (typeof setupSF === 'function') {
+          callback();
+          return;
+        }
+        var script = document.getElementById('zoho-optin-js');
+        if (!script) {
+          if (attempt < 40) setTimeout(function () { waitForZoho(callback, attempt + 1); }, 50);
+          return;
+        }
+        function done() {
+          if (typeof setupSF === 'function') callback();
+          else if (attempt < 40) setTimeout(function () { waitForZoho(callback, attempt + 1); }, 50);
+        }
+        if (script.readyState === 'complete' || script.readyState === 'loaded') {
+          done();
+          return;
+        }
+        script.addEventListener('load', done);
+      }
+
+      function boot() {
+        initLangSwitcher();
+        currentLang = getInitialLang();
+        setLang(currentLang);
+        waitForZoho(initZohoForm);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot);
+      } else {
+        boot();
+      }
+    })();
+  </script>
+</body>
+</html>
