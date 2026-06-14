@@ -87,6 +87,33 @@
       margin: 0 auto;
     }
 
+    .page-body {
+      width: 100%;
+    }
+
+    @media (max-width: 1023px) {
+      .page {
+        justify-content: space-between;
+        gap: clamp(0.75rem, 2dvh, 1.5rem);
+      }
+
+      .page-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: clamp(0.75rem, 3dvh, 2.5rem);
+        min-height: 0;
+      }
+
+      .hero,
+      .teaser,
+      .form-section,
+      .form-note {
+        margin-bottom: 0;
+      }
+    }
+
     .page-header {
       display: grid;
       grid-template-columns: 2.75rem 1fr 2.75rem;
@@ -443,15 +470,6 @@
 
     /* Tablet – mobilný layout, ale širší a čitateľnejší */
     @media (min-width: 768px) and (max-width: 1023px) {
-      .hero {
-        margin-bottom: 1.25rem;
-      }
-
-      .teaser {
-        margin-bottom: 1.5rem;
-        gap: 1rem;
-      }
-
       .form-note {
         font-size: 0.875rem;
       }
@@ -490,6 +508,12 @@
         min-height: auto;
         padding: 0;
         margin: 0;
+        justify-content: flex-start;
+        gap: 0;
+      }
+
+      .page-body {
+        display: contents;
       }
 
       .logo-aside {
@@ -655,6 +679,7 @@
         <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </nav>
 
+      <div class="page-body">
       <section class="hero">
         <h1 data-i18n="heading">Svapni si čo len chceš</h1>
         <p class="subtitle" data-i18n="subtitle">Ponúkni, čo vieš. Nájdi niekoho, kto ti pomôže. Od opravárov a majstrov až po umelcov, trénerov či bežnú výpomoc. Všetko na jednom mieste vo svojom okolí.</p>
@@ -733,6 +758,7 @@
       </section>
 
       <p class="form-note" data-i18n="formNote">Dáme ti vedieť hneď po spustení. Žiadny spam.</p>
+      </div>
 
       <nav class="lang-switch mobile-only" aria-label="Language">
         <button type="button" class="lang-btn" data-lang="sk" aria-pressed="false">SK</button>
